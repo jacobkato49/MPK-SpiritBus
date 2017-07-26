@@ -1,0 +1,19 @@
+{
+  "name": "mpk-spiritbus",
+  "version": "1.0.0",
+  "description": "Public Transit Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobkato49/MPK-SpiritBus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobkato49/MPK-SpiritBus/issues"
+  },
+  "homepage": "https://github.com/jacobkato49/MPK-SpiritBus#readme"
+}
