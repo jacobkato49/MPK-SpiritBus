@@ -20,6 +20,8 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "express-generator": "^4.15.0",
+    "gtfs-sequelize": "^2.0.0",
+    "mysql": "^2.14.1",
     "sequelize": "^4.5.0"
   }
 }
