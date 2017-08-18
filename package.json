@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/jacobkato49/MPK-SpiritBus/issues"
   },
-  "homepage": "https://github.com/jacobkato49/MPK-SpiritBus#readme"
+  "homepage": "https://github.com/jacobkato49/MPK-SpiritBus#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-generator": "^4.15.0",
+    "sequelize": "^4.5.0"
+  }
 }
