@@ -11,7 +11,6 @@ var router = express.Router();
 //models
 var db= require("../models");
 
-
 //Redirects to the URL derived from the specified path
 router.get("/", function(req,res){
   res.redirect(302, "/mpkbus");
