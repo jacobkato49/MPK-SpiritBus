@@ -25,6 +25,7 @@
     "gtfs-sequelize": "^2.0.0",
     "method-override": "^2.3.9",
     "mysql": "^2.14.1",
-    "sequelize": "^4.5.0"
+    "sequelize": "^4.5.0",
+    "streamsql": "^0.8.5"
   }
 }

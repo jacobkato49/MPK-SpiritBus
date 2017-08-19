@@ -1,9 +1,9 @@
 var GTFS = require("gtfs-sequelize");
 
 var pgConfig = {
-  database: "mysql://gtfs_sequelize:gtfs_sequelize@localhost:3000/gtfs-sequelize-test",
+  database: "server=localhost;uid=root;pwd=password;database=throw;",
   downloadsDir: "downloads",
-  gtfsFilename: "Improved_GTFS.zip",
+  gtfsFilename: "/c/Users/Jacob Kato/Desktop/web_dev_ucla/MPK-SpiritBus/data/Improved_GTFS.zip",
   spatial: true,
   sequelizeOptions: {
     logging: false,
