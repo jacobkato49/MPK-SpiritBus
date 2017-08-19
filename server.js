@@ -24,6 +24,9 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 
 
+//method-override area
+app.use(methodOver("_method")); // override with POST having ?_method=DELETE 
+
 //express handlebars area
 app.engine("handlebars", expressHandle({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
