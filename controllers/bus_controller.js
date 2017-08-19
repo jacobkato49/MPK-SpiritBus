@@ -40,3 +40,10 @@ router.put("mpkbus/update/return/:id", function(req,res){
 
 
 })
+
+
+
+
+
+//export
+module.exports= router;
