@@ -394,8 +394,7 @@ body {
 #footer {
   background-color: #637AFF; }
 
-#map-img {
-  max-width: 800px;
+#map-container {
   opacity: .9; }
 
 #map-controls {
