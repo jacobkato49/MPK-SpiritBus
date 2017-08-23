@@ -364,9 +364,6 @@ body {
   position: relative;
   min-height: calc(100vh - 70px); }
 
-#map-container {
-  margin-bottom: 5em; }
-
 h1 {
   margin: 0; }
 
@@ -401,13 +398,15 @@ body {
   max-width: 800px;
   opacity: .9; }
 
-#map-controls button {
-  background-color: #637AFF;
-  color: white;
-  border: none;
-  border-radius: 5px; }
-#map-controls button:hover {
-  color: #C2CDFF; }
+#map-controls {
+  text-align: center; }
+  #map-controls button {
+    background-color: #637AFF;
+    color: white;
+    border: none;
+    border-radius: 5px; }
+  #map-controls button:hover {
+    color: #C2CDFF; }
 
 #head h1 {
   color: #FF785E; }
