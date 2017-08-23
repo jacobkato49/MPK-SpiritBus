@@ -361,7 +361,8 @@ body {
   font-family: "Encode Sans Semi Condensed", sans-serif; }
 
 #wrap {
-  position: relative; }
+  position: relative;
+  min-height: calc(100vh - 70px); }
 
 #map-container {
   margin-bottom: 5em; }
