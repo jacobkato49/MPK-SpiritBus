@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed);
+
+$lavblue: #637AFF;
+
+$salmon: #FF785E;
+
+$light-lavblue: #C2CDFF ;
+
+$fadedgrey: rgba(207, 209, 220, 0.6);
+
+$lessfaded: rgba(207, 209, 220, 0.9);
+
+$font-main: 'Encode Sans Semi Condensed', sans-serif;
+
+$color-main: $salmon;
+
+$color-second: $lavblue;
+
+$hover: $light-lavblue;
+
+
+//breakpoints
+
+$small:		450px;
+$medium:	760px;
+$large:		1200px;

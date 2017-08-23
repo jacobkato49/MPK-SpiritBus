@@ -1,0 +1,20 @@
+#map-controls {
+	button{
+		background-color: $color-second;
+		color: white;
+		border: none;
+		border-radius: 5px;
+	}
+	button:hover {
+		color: $hover;
+	}
+}
+
+#head {
+	h1 {
+		color: $color-main;
+	}
+		h2 {
+			color: $color-second;
+		}
+}

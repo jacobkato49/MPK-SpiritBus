@@ -1,0 +1,17 @@
+body {
+	background-image: url("../images/scott-webb.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 640px;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+#main-nav {
+	background-color: $color-second;
+}
+
+#footer {
+	background-color: $color-second;
+}
