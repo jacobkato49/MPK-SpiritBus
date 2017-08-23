@@ -3,7 +3,9 @@ const express= require("express");
 const bodyParser = require("body-parser");
 const methodOver = require("method-override");
 const expressHandle = require("express-handlebars");
-const expressSess = require("express-session")
+const expressSess = require("express-session");
+const mysql = require("mysql");
+
 const fs = require("fs");
 
 //use the models
@@ -32,6 +34,8 @@ app.use(methodOver("_method")); // override with POST having ?_method=DELETE
 app.engine("handlebars", expressHandle({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
+//controllers
+require("./controllers/bus_controller")(app);
 
 
 //syncing the models to sequelize
