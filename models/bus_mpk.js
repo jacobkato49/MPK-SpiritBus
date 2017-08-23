@@ -1,6 +1,6 @@
 module.exports= function(sequelize, DataTypes){
 
-  var MpkBus =sequelize.define("routes",{
+  var mpkBus =sequelize.define("routes",{
 
     route_id: {
       type: DataTypes.INTEGER,
@@ -20,5 +20,5 @@ module.exports= function(sequelize, DataTypes){
     }
   });
 
-  return MpkBus;
+  return mpkBus;
 };
