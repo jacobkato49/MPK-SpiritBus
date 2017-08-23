@@ -51,17 +51,23 @@
       Copyright &copy; 2017 <a href="https://github.com/jacobkato49">Jakob Kato</a>, <a href="https://github.com/dtlobue">Daniel Lobue</a>, <a href="https://github.com/JamesBaine">James Baine</a>
     </div>
 		</footer>
-	<script>
-		function myMap() {
-		var mapProp= {
-		    center:new google.maps.LatLng(34.05867,-118.12214),
-		    zoom:13,
-		};
-		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		}
-	</script>
+		<script>
+			function initMap() {
+				var map = new google.maps.Map(document.getElementById('googleMap'), {
+					zoom: 13,
+					center: {lat: 34.05867, lng: -118.12214}
+				});
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAysHO21GVaK45RdxRsE0Q-xN6s8oBuY4&callback=myMap"></script>
+				var transitLayer = new google.maps.TransitLayer();
+				transitLayer.setMap(map);
+			}
+		</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAysHO21GVaK45RdxRsE0Q-xN6s8oBuY4&callbackinitMap"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 
