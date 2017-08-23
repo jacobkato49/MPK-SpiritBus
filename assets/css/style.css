@@ -413,4 +413,9 @@ body {
 #head h2 {
   color: #637AFF; }
 
+#footer a {
+  color: #C2CDFF; }
+#footer a:hover {
+  text-decoration: underline; }
+
 /*# sourceMappingURL=style.css.map */

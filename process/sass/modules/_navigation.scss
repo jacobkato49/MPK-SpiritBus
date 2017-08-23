@@ -19,3 +19,12 @@
 			color: $color-second;
 		}
 }
+
+#footer {
+	a {
+		color: $light-lavblue;
+	}
+	a:hover {
+		text-decoration: underline;;
+	}
+}
