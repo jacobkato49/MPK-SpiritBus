@@ -390,6 +390,10 @@ body {
 
 #main-nav {
   background-color: #637AFF; }
+  #main-nav #dropdown-menu {
+    background-color: #637AFF; }
+    #main-nav #dropdown-menu a:hover {
+      background-color: inherit; }
 
 #footer {
   background-color: #637AFF; }

@@ -10,6 +10,12 @@ body {
 
 #main-nav {
 	background-color: $color-second;
+	#dropdown-menu {
+		background-color: $color-second;
+		a:hover{
+			background-color: inherit;
+		}
+	}
 }
 
 #footer {
