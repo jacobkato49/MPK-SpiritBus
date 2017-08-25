@@ -54,9 +54,93 @@
 		<script>
 			function initMap() {
 				var map = new google.maps.Map(document.getElementById('googleMap'), {
-					zoom: 13,
+					zoom: 14,
 					center: {lat: 34.05867, lng: -118.12214}
 				});
+
+				var routeOneCoordinates = [
+					{lat: 34.059124, lng: -118.125745},
+					{lat: 34.040958, lng: -118.128845},
+					{lat: 34.037931, lng: -118.151278},
+					{lat: 34.037567, lng: -118.146130},
+					{lat: 34.053775, lng: -118.136251},
+					{lat: 34.069676, lng: -118.134268},
+					{lat: 34.063035, lng: -118.134142},
+					{lat: 34.069726, lng: -118.117109},
+					{lat: 34.060001, lng: -118.116952}
+				];
+
+				var routeOne = new google.maps.Polygon({
+					paths: routeOneCoordinates,
+					strokeColor: '#FF0000',
+					strokeOpacity: 0.8,
+					strokeWeight: 3,
+					fillColor: '#FF0000',
+					fillOpacity: 0.35
+				});
+
+				routeOne.setMap(map);
+
+				var routeTwoCoordinates = [
+					{lat: 34.062129, lng: -118.134319},
+					{lat: 34.059642, lng: -118.133538},
+					{lat: 34.046602, lng: -118.140065},
+					{lat: 34.045941, lng: -118.138583},
+					{lat: 34.057826, lng: -118.127587}
+				];
+
+				var routeTwo = new google.maps.Polygon({
+					paths: routeTwoCoordinates,
+					strokeColor: '#32CD32',
+					strokeOpacity: 1.0,
+					strokeWeight: 3,
+					fillColor: '#32CD32',
+					fillOpacity: 0.4
+				});
+
+				routeTwo.setMap(map);
+
+				var routeThreeCoordinates = [
+					{lat: 34.059124, lng: -118.125745},
+					{lat: 34.059897, lng: -118.127477},
+					{lat: 34.066071, lng: -118.127558},
+					{lat: 34.066169, lng: -118.109539},
+					{lat: 34.062649, lng: -118.109464},
+					{lat: 34.062409, lng: -118.112393},
+					{lat: 34.055423, lng: -118.112543},
+					{lat: 34.055405, lng: -118.121019},
+					{lat: 34.062625, lng: -118.120632}
+				];
+
+				var routeThree = new google.maps.Polygon({
+					paths: routeThreeCoordinates,
+					strokeColor: '#9932CC',
+					strokeOpacity: 0.75,
+					strokeWeight: 3,
+					fillColor: '#9932CC',
+					fillOpacity: 0.4
+				});
+
+				routeThree.setMap(map);
+
+				var routeFourCoordinates = [
+					{lat: 34.059124, lng: -118.125745},
+					{lat: 34.062226, lng: -118.139034},
+					{lat: 34.060140, lng: -118.144981},
+					{lat: 34.062682, lng: -118.134053},
+					{lat: 34.066056, lng: -118.134134}
+				];
+
+				var routeFour = new google.maps.Polygon({
+					paths: routeFourCoordinates,
+					strokeColor: '#FFDF00',
+					strokeOpacity: 0.8,
+					strokeWeight: 3,
+					fillColor: '#FFDF00',
+					fillOpacity: 0.4
+				});
+
+				routeFour.setMap(map);
 
 				var transitLayer = new google.maps.TransitLayer();
 				transitLayer.setMap(map);
