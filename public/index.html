@@ -3,7 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Spirit Bus</title>
-		<!-- Shoelace CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
 
@@ -75,7 +77,7 @@
 					strokeColor: '#FF0000',
 					strokeOpacity: 0.8,
 					strokeWeight: 3,
-					fillColor: '#FF0000',
+					fillColor: 'transparent',
 					fillOpacity: 0.35
 				});
 
@@ -94,7 +96,7 @@
 					strokeColor: '#32CD32',
 					strokeOpacity: 1.0,
 					strokeWeight: 3,
-					fillColor: '#32CD32',
+					fillColor: 'transparent',
 					fillOpacity: 0.4
 				});
 
@@ -117,7 +119,7 @@
 					strokeColor: '#9932CC',
 					strokeOpacity: 0.75,
 					strokeWeight: 3,
-					fillColor: '#9932CC',
+					fillColor: 'transparent',
 					fillOpacity: 0.4
 				});
 
@@ -136,7 +138,7 @@
 					strokeColor: '#FFDF00',
 					strokeOpacity: 0.8,
 					strokeWeight: 3,
-					fillColor: '#FFDF00',
+					fillColor: 'transparent',
 					fillOpacity: 0.4
 				});
 
@@ -156,6 +158,10 @@
 	  crossorigin="anonymous"></script>
 		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+		<!-- Make sure you put this AFTER Leaflet's CSS -->
+ 		<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
 
 	</body>
 </html>
