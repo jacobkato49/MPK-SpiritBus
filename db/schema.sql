@@ -140,4 +140,28 @@ CREATE TABLE IF NOT EXISTS `trips` (
   `shape_id` varchar(20) DEFAULT NULL,
   `mode` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for table `agency`
+--
+ALTER TABLE `agency`
+ ADD PRIMARY KEY (`agency_id`);
+
+--
+-- Indexes for table `calendar`
+--
+ALTER TABLE `calendar`
+ ADD PRIMARY KEY (`service_id`);
+
+--
+-- Indexes for table `calendar_dates`
+--
+ALTER TABLE `calendar_dates`
+ ADD PRIMARY KEY (`service_id`,`date`), ADD KEY `service_id` (`service_id`), ADD KEY `date_timestamp` (`date_timestamp`), ADD KEY `exception_type` (`exception_type`);
+
+--
+-- Indexes for table `routes`
+--
+ALTER TABLE `routes`
+ ADD PRIMARY KEY (`route_id`), ADD KEY `agency_id` (`agency_id`), ADD KEY `route_type` (`route_type`);
  
