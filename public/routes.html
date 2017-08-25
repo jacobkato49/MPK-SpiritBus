@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Spirit Bus</title>
+		<!-- Shoelace CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
+
+	</head>
+	<body>
+	<nav id="main-nav" class="navbar navbar-toggleable-md navbar-light bg-faded">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <a class="navbar-brand" href="index.html">Spirit Bus</a>
+	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="routes.html">Bus Routes</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="stops.html">Bus Stops</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          City
+	        </a>
+	        <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	          <a class="dropdown-item" href="#">Monterey Park</a>
+	        </div>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+		</header>
+
+
+		<div id="main-content"  class="container">
+			<div class="table-responsive">
+				<table id="routes-table" class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>Route ID</th>
+							<th>Route Alias</th>
+							<th>Route Description</th>
+							<th>Route Color</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-ng-repeat="x in routes" class="ng-scope">
+							<td class="ng-binding">3573</td>
+							<td class="ng-binding">Route 1</td>
+							<td class="ng-binding"> Garfield Avenue S and W El Repetto Drive - N Atlantic Boulevard and W Emerson Avenue</td>
+							<td style="background-color: #eb4042" class="ng-binding">#eb4042</td>
+						</tr><!-- end ngRepeat: x in routes -->
+						<tr data-ng-repeat="x in routes" class="ng-scope">
+							<td class="ng-binding">3567</td>
+							<td class="ng-binding">Route 3</td>
+							<td class="ng-binding"> N Alhambra Avenue and E Garvey Avenue -  Garvey Avenue and S Ramona Avenue</td>
+							<td style="background-color: #a96ed8" class="ng-binding">#a96ed8</td>
+						</tr><!-- end ngRepeat: x in routes -->
+						<tr data-ng-repeat="x in routes" class="ng-scope">
+							<td class="ng-binding">3569</td>
+							<td class="ng-binding">SO.MIAMI HTS-PERRINE VIA SOUTHLAND</td>
+							<td class="ng-binding">South Dade Transitway, Perrine Shopping Center, Southland Mall, Quail Roost Drive/SW 117 Avenue</td>
+							<td style="background-color: #f2df2f" class="ng-binding">#f2df2f</td>
+						</tr><!-- end ngRepeat: x in routes -->
+						<tr data-ng-repeat="x in routes" class="ng-scope">
+							<td class="ng-binding">3570</td>
+							<td class="ng-binding">SO.MIAMI HTS-PERRINE VIA SOUTHLAND</td>
+							<td class="ng-binding">South Dade Transitway, Perrine Shopping Center, Southland Mall, Quail Roost Drive/SW 117 Avenue</td>
+							<td style="background-color:
+#64b54a" class="ng-binding">
+#64b54a</td>
+						</tr><!-- end ngRepeat: x in routes -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<footer id="footer" class="py-3 mt-1">
+    <div class="container text-center">
+      Copyright &copy; 2017 <a href="https://github.com/jacobkato49">Jakob Kato</a>, <a href="https://github.com/dtlobue">Daniel Lobue</a>, <a href="https://github.com/JamesBaine">James Baine</a>
+    </div>
+		</footer>
+		<script>
+			function initMap() {
+				var map = new google.maps.Map(document.getElementById('googleMap'), {
+					zoom: 13,
+					center: {lat: 34.05867, lng: -118.12214}
+				});
+
+				var transitLayer = new google.maps.TransitLayer();
+				transitLayer.setMap(map);
+			}
+		</script>
+
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAysHO21GVaK45RdxRsE0Q-xN6s8oBuY4&callback=initMap">
+		</script>
+		<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
