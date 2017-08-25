@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 var router = express.Router();
 
 //models
-var db= require("../models");
+var db = require("../models");
 
 //setup Exress router to serve static files (?)
 //router.use(express.static(path.join(__dirname, 'public')));
@@ -47,7 +47,7 @@ router.get("/mpkbus:", function(req,res){
 // router.put("mpkbus/update/request/:id", function(req,res){
 
 
-})
+
 
 
 
@@ -55,7 +55,7 @@ router.get("/mpkbus:", function(req,res){
 // router.put("mpkbus/update/return/:id", function(req,res){
 
 
-})
+
 
 
 //delete would go here
@@ -63,4 +63,4 @@ router.get("/mpkbus:", function(req,res){
 
 
 //export
-module.exports= router;
+module.exports = router;

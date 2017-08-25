@@ -35,7 +35,7 @@ app.engine("handlebars", expressHandle({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 //controllers
-require("./controllers/bus_controller")(app);
+app.use("/", require("./controllers/bus_controller"));
 
 
 //syncing the models to sequelize
