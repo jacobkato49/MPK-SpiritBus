@@ -11,7 +11,6 @@ var router = express.Router();
 //models
 var db = require("../models");
 
-//setup Exress router to serve static files (?)
 //router.use(express.static(path.join(__dirname, 'public')));
 
 //Redirects to the URL derived from the specified path

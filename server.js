@@ -18,7 +18,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 //express static uses files (css,js,images)
-// app.use(express.static("./assets"));
 app.use(express.static("./public"));
 
 //bodyParser - parsing responses (middleware)
