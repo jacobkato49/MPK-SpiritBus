@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Transit layer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title>Simple Map</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
+      html, body, #map {
         height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
+        width: 100%;
         margin: 0;
         padding: 0;
       }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: {lat: 34.05867, lng: -118.12214}
-        });
 
-        var transitLayer = new google.maps.TransitLayer();
-        transitLayer.setMap(map);
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAysHO21GVaK45RdxRsE0Q-xN6s8oBuY4&callback=initMap">
-    </script>
-  </body>
+   </style>
+   <script src="https://js.arcgis.com/3.15/"></script>
+   <script>
+     var map,toolbar;
+
+     require(["esri/map",
+            "esri/toolbars/draw",
+            "esri/symbols/SimpleLineSymbol",
+            "esri/graphic",
+            "esri/Color",
+            "dojo/on",
+            "dojo/dom",
+            "dojo/domReady!"], function(Map,Draw,SimpleLineSymbol,Graphic,Color,on, dom) {
+       map = new Map("map", {
+         basemap: "streets",
+         center: [-122.45, 37.75],
+         zoom: 13
+       });
+
+       var sls = new SimpleLineSymbol(
+       SimpleLineSymbol.STYLE_DASH,
+       new Color([255,0,0]),3);
+       var mybutton = dojo.byId("drawPoly");
+       on(mybutton,"click",initToolbar);
+
+
+       function initToolbar() {
+          toolbar = new Draw(map, { showTooltips: true });
+          toolbar.activate(Draw.POLYLINE);
+          toolbar.on("draw-end", addToMap);
+
+       }
+
+       function addToMap(evt) {
+          alert("Index");
+          toolbar.deactivate();
+          var symbol = sls;
+
+          var graphic = new Graphic(evt.geometry, symbol);
+          map.graphics.add(graphic);
+       }
+
+     });
+ </script>
+</head>
+   <body>
+     <button data-dojo-type="dijit/form/Button" id="drawPoly">Draw Polyline</button>
+       <div id="map"></div>
+    </body>
 </html>
