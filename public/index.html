@@ -54,6 +54,20 @@
     </div>
 		</footer>
 		<script>
+		var sequelize = require("sequelize");
+    var stop_start = require("../models");
+
+						console.log("hey");
+
+            stop_start.sync({force: true}).then(() => {
+                console.log(stop_start);
+                return stop_start;
+            });
+
+
+            stop_start.get("shape_pt_lat");
+
+
 			function initMap() {
 				var map = new google.maps.Map(document.getElementById('googleMap'), {
 					zoom: 14,
