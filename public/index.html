@@ -45,12 +45,52 @@
   		</div>
 				<div id="map-controls" class="control my-3">
 					<button class="btn-xs btn-primary" onclick="showRoutes()">Show Routes</button>
-					<button class="btn-xs btn-primary" onclick="showBusGPS()">Show Stops</button>
+					<button class="btn-xs btn-primary" onclick="showStops()">Show Stops</button>
 					<button class="btn-xs btn-primary" onclick="toggleRefresh()">Toggle Refresh</button>
 					<div id="slider"></div>
 				</div>
 			</div>
 		</div>
+
+		<div class="container mt-3">
+			<table id="stops-table" class="table">
+				<thead>
+					<tr>
+						<th>Sequence</th>
+						<th>Stop ID</th>
+						<th>Stop Name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>112</td>
+						<td>Bus 1</td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>J324</td>
+						<td>Bus 2</td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>336</td>
+						<td>Bus 3</td>
+					</tr>
+					<tr>
+						<th scope="row">4</th>
+						<td>567</td>
+						<td>Bus 4</td>
+					</tr>
+					<tr>
+						<th scope="row">5</th>
+						<td>678</td>
+						<td>Bus 5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
 
 		<div class="container">
 			<div class="table-responsive">
