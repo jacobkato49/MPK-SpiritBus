@@ -118,6 +118,10 @@
 
 				routeOne.setMap(map);
 
+				var windowRouteTwo = new google.maps.InfoWindow({
+					content: '<div>' + 'Bus Stop' + '</div>'
+				});
+
 				var markerTwo = new google.maps.Marker({
 					position: {lat: 34.060991, lng: -118.133814},
 					title: '',
@@ -126,6 +130,7 @@
 				});
 				markerTwo.addListener('click', function() {
 					toggleBounceTwo();
+					windowRouteTwo.open(map, markerTwo);
 				});
 
 				function toggleBounceTwo() {
@@ -181,6 +186,10 @@
 
 				routeTwo.setMap(map);
 
+				var windowRouteThree = new google.maps.InfoWindow({
+					content: '<div>' + 'Bus Stop' + '</div>'
+				});
+
 				var markerThree = new google.maps.Marker({
 					position: {lat: 34.066169, lng: -118.109539},
 					title: '',
@@ -189,6 +198,7 @@
 				});
 				markerThree.addListener('click', function() {
 					toggleBounceThree();
+					windowRouteThree.open(map, markerThree);
 				});
 
 				function toggleBounceThree() {
@@ -225,6 +235,10 @@
 
 				routeThree.setMap(map);
 
+				var windowRouteFour = new google.maps.InfoWindow({
+					content: '<div>' + 'Bus Stop' + '</div>'
+				});
+
 				var markerFour = new google.maps.Marker({
 					position: {lat: 34.044799, lng: -118.136799},
 					title: '',
@@ -233,6 +247,7 @@
 				});
 				markerFour.addListener('click', function() {
 					toggleBounceFour();
+					windowRouteFour.open(map, markerFour);
 				});
 
 				function toggleBounceFour() {
