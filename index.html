@@ -58,6 +58,27 @@
 					center: {lat: 34.05867, lng: -118.12214}
 				});
 
+
+				var markerOne = new google.maps.Marker({
+					position: {lat: 34.05867, lng: -118.12214},
+					title: 'City Hall',
+					draggable: false,
+					animation: google.maps.Animation.DROP,
+				});
+				markerOne.addListener('click', function() {
+					toggleBounce();
+				});
+
+				function toggleBounce() {
+					if (markerOne.getAnimation() !== null) {
+						markerOne.setAnimation(null);
+					} else {
+						markerOne.setAnimation(google.maps.Animation.BOUNCE);
+					}
+				}
+
+				markerOne.setMap(map);
+
 			  var routeOneCoordinates = [
 					{lat: 34.059775, lng: -118.125541},
 					{lat: 34.055688, lng: -118.125444},
@@ -92,6 +113,26 @@
 				});
 
 				routeOne.setMap(map);
+
+				var markerTwo = new google.maps.Marker({
+					position: {lat: 34.060991, lng: -118.133814},
+					title: '',
+					draggable: false,
+					animation: google.maps.Animation.DROP,
+				});
+				markerTwo.addListener('click', function() {
+					toggleBounceTwo();
+				});
+
+				function toggleBounceTwo() {
+					if (markerTwo.getAnimation() !== null) {
+						markerTwo.setAnimation(null);
+					} else {
+						markerTwo.setAnimation(google.maps.Animation.BOUNCE);
+					}
+				}
+
+				markerTwo.setMap(map);
 
 				var routeTwoCoordinates = [
 					{lat: 34.062448, lng: -118.127570},
@@ -136,6 +177,27 @@
 
 				routeTwo.setMap(map);
 
+				var markerThree = new google.maps.Marker({
+					position: {lat: 34.066169, lng: -118.109539},
+					title: '',
+					draggable: false,
+					animation: google.maps.Animation.DROP,
+				});
+				markerThree.addListener('click', function() {
+					toggleBounceThree();
+				});
+
+				function toggleBounceThree() {
+					if (markerThree.getAnimation() !== null) {
+						markerThree.setAnimation(null);
+					} else {
+						markerThree.setAnimation(google.maps.Animation.BOUNCE);
+					}
+				}
+
+				markerThree.setMap(map);
+
+
 				var routeThreeCoordinates = [
 					{lat: 34.059775, lng: -118.125541},
 					{lat: 34.059897, lng: -118.127477},
@@ -158,6 +220,26 @@
 				});
 
 				routeThree.setMap(map);
+
+				var markerFour = new google.maps.Marker({
+					position: {lat: 34.044799, lng: -118.136799},
+					title: '',
+					draggable: false,
+					animation: google.maps.Animation.DROP,
+				});
+				markerFour.addListener('click', function() {
+					toggleBounceFour();
+				});
+
+				function toggleBounceFour() {
+					if (markerFour.getAnimation() !== null) {
+						markerFour.setAnimation(null);
+					} else {
+						markerFour.setAnimation(google.maps.Animation.BOUNCE);
+					}
+				}
+
+				markerFour.setMap(map);
 
 				var routeFourCoordinates = [
 					{lat: 34.059775, lng: -118.125541},
