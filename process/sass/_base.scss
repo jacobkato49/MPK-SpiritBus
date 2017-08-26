@@ -29,3 +29,7 @@ h1 {
 	color: $light-lavblue;
 	font-size: 12px;
 }
+
+#main-content {
+	min-height: calc(100vh - 95px);
+}
