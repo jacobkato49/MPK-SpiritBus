@@ -58,6 +58,9 @@
 					center: {lat: 34.05867, lng: -118.12214}
 				});
 
+				var windowCityHall = new google.maps.InfoWindow({
+					content: '<div>' + 'City Hall' + '</div>'
+				});
 
 				var markerOne = new google.maps.Marker({
 					position: {lat: 34.05867, lng: -118.12214},
@@ -67,6 +70,7 @@
 				});
 				markerOne.addListener('click', function() {
 					toggleBounce();
+					windowCityHall.open(map, markerOne);
 				});
 
 				function toggleBounce() {
