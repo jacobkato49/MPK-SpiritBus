@@ -57,7 +57,6 @@
 		var sequelize = require("sequelize");
     var stop_start = require("../models");
 
-						console.log("hey");
 
             stop_start.sync({force: true}).then(() => {
                 console.log(stop_start);
