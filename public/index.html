@@ -43,14 +43,59 @@
 			<div id="map-container" class="container text-center">
 				<div id="googleMap" style="width:100%;height:600px;"></div>
   		</div>
-				<div id="map-controls" class="control mt-3">
-					<button class="btn-xs btn-primary" onclick="showBusLayers()">Show Buses</button>
-					<button class="btn-xs btn-primary" onclick="showBusGPS()">Show Bus GPS</button>
+				<div id="map-controls" class="control my-3">
+					<button class="btn-xs btn-primary" onclick="showRoutes()">Show Routes</button>
+					<button class="btn-xs btn-primary" onclick="showBusGPS()">Show Stops</button>
 					<button class="btn-xs btn-primary" onclick="toggleRefresh()">Toggle Refresh</button>
 					<div id="slider"></div>
 				</div>
 			</div>
 		</div>
+
+		<div class="container">
+			<div class="table-responsive">
+				<table id="routes-table" class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>Route ID</th>
+							<th>Route Alias</th>
+							<th>Route Description</th>
+							<th>Route Color</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-ng-repeat="x in routes" class="ng-scope">
+							<td class="ng-binding">3573</td>
+							<td class="ng-binding">Route 1</td>
+							<td class="ng-binding"> Garfield Avenue S and W El Repetto Drive - N Atlantic Boulevard and W Emerson Avenue</td>
+							<td style="background-color: #eb4042" class="ng-binding">#eb4042</td>
+						</tr><!-- end ngRepeat: x in routes -->
+						<tr data-ng-repeat="x in routes" class="ng-scope">
+							<td class="ng-binding">3567</td>
+							<td class="ng-binding">Route 3</td>
+							<td class="ng-binding"> N Alhambra Avenue and E Garvey Avenue -  Garvey Avenue and S Ramona Avenue</td>
+							<td style="background-color: #a96ed8" class="ng-binding">#a96ed8</td>
+						</tr><!-- end ngRepeat: x in routes -->
+						<tr data-ng-repeat="x in routes" class="ng-scope">
+							<td class="ng-binding">3569</td>
+							<td class="ng-binding">SO.MIAMI HTS-PERRINE VIA SOUTHLAND</td>
+							<td class="ng-binding">South Dade Transitway, Perrine Shopping Center, Southland Mall, Quail Roost Drive/SW 117 Avenue</td>
+							<td style="background-color: #f2df2f" class="ng-binding">#f2df2f</td>
+						</tr><!-- end ngRepeat: x in routes -->
+						<tr data-ng-repeat="x in routes" class="ng-scope">
+							<td class="ng-binding">3570</td>
+							<td class="ng-binding">SO.MIAMI HTS-PERRINE VIA SOUTHLAND</td>
+							<td class="ng-binding">South Dade Transitway, Perrine Shopping Center, Southland Mall, Quail Roost Drive/SW 117 Avenue</td>
+							<td style="background-color:
+#64b54a" class="ng-binding">
+#64b54a</td>
+						</tr><!-- end ngRepeat: x in routes -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+
 		<footer id="footer" class="py-3 mt-1">
     <div class="container text-center">
       Copyright &copy; 2017 <a href="https://github.com/jacobkato49">Jakob Kato</a>, <a href="https://github.com/dtlobue">Daniel Lobue</a>, <a href="https://github.com/JamesBaine">James Baine</a>
@@ -178,6 +223,6 @@
  		<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
    crossorigin=""></script>
-
+	 <script type="text/javascript" src="index.js"></script>
 	</body>
 </html>
