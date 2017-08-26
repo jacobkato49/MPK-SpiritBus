@@ -112,19 +112,19 @@
 						</tr><!-- end ngRepeat: x in routes -->
 						<tr data-ng-repeat="x in routes" class="ng-scope">
 							<td class="ng-binding">3567</td>
-							<td class="ng-binding">Route 3</td>
+							<td class="ng-binding">Route 2</td>
 							<td class="ng-binding"> N Alhambra Avenue and E Garvey Avenue -  Garvey Avenue and S Ramona Avenue</td>
 							<td style="background-color: #a96ed8" class="ng-binding">#a96ed8</td>
 						</tr><!-- end ngRepeat: x in routes -->
 						<tr data-ng-repeat="x in routes" class="ng-scope">
 							<td class="ng-binding">3569</td>
-							<td class="ng-binding">SO.MIAMI HTS-PERRINE VIA SOUTHLAND</td>
+							<td class="ng-binding">Route 3</td>
 							<td class="ng-binding">South Dade Transitway, Perrine Shopping Center, Southland Mall, Quail Roost Drive/SW 117 Avenue</td>
 							<td style="background-color: #f2df2f" class="ng-binding">#f2df2f</td>
 						</tr><!-- end ngRepeat: x in routes -->
 						<tr data-ng-repeat="x in routes" class="ng-scope">
 							<td class="ng-binding">3570</td>
-							<td class="ng-binding">SO.MIAMI HTS-PERRINE VIA SOUTHLAND</td>
+							<td class="ng-binding">Route 4</td>
 							<td class="ng-binding">South Dade Transitway, Perrine Shopping Center, Southland Mall, Quail Roost Drive/SW 117 Avenue</td>
 							<td style="background-color:
 #64b54a" class="ng-binding">
@@ -155,99 +155,140 @@
             stop_start.get("shape_pt_lat");
 
 
-			function initMap() {
-				var map = new google.maps.Map(document.getElementById('googleMap'), {
-					zoom: 14,
-					center: {lat: 34.05867, lng: -118.12214}
-				});
+						function initMap() {
+							var map = new google.maps.Map(document.getElementById('googleMap'), {
+								zoom: 14,
+								center: {lat: 34.05867, lng: -118.12214}
+							});
 
-				var routeOneCoordinates = [
-					{lat: 34.059124, lng: -118.125745},
-					{lat: 34.040958, lng: -118.128845},
-					{lat: 34.037931, lng: -118.151278},
-					{lat: 34.037567, lng: -118.146130},
-					{lat: 34.053775, lng: -118.136251},
-					{lat: 34.069676, lng: -118.134268},
-					{lat: 34.063035, lng: -118.134142},
-					{lat: 34.069726, lng: -118.117109},
-					{lat: 34.060001, lng: -118.116952}
-				];
+							var routeOneCoordinates = [
+								{lat: 34.059775, lng: -118.125541},
+								{lat: 34.055688, lng: -118.125444},
+								{lat: 34.055099, lng: -118.125996},
+								{lat: 34.050076, lng: -118.127791},
+								{lat: 34.048862, lng: -118.128640},
+								{lat: 34.047168, lng: -118.128820},
+								{lat: 34.044288, lng: -118.128471},
+								{lat: 34.041016, lng: -118.129169},
+								{lat: 34.039141, lng: -118.129351},
+								{lat: 34.037807, lng: -118.130274},
+								{lat: 34.036740, lng: -118.130531},
+								{lat: 34.036562, lng: -118.144661},
+								{lat: 34.037451, lng: -118.146485},
+								{lat: 34.040403, lng: -118.142204},
+								{lat: 34.047835, lng: -118.139887},
+								{lat: 34.053775, lng: -118.136251},
+								{lat: 34.059800, lng: -118.133600},
+								{lat: 34.062413, lng: -118.134211},
+								{lat: 34.069754, lng: -118.134340},
+								{lat: 34.069726, lng: -118.117109},
+								{lat: 34.060001, lng: -118.116952}
+							];
 
-				var routeOne = new google.maps.Polygon({
-					paths: routeOneCoordinates,
-					strokeColor: '#FF0000',
-					strokeOpacity: 0.8,
-					strokeWeight: 3,
-					fillColor: 'transparent',
-					fillOpacity: 0.35
-				});
+							var routeOne = new google.maps.Polygon({
+								paths: routeOneCoordinates,
+								strokeColor: '#FF0000',
+								strokeOpacity: 0.8,
+								strokeWeight: 3,
+								fillColor: '#FF0000',
+								fillOpacity: 0.35
+							});
 
-				routeOne.setMap(map);
+							routeOne.setMap(map);
 
-				var routeTwoCoordinates = [
-					{lat: 34.062129, lng: -118.134319},
-					{lat: 34.059642, lng: -118.133538},
-					{lat: 34.046602, lng: -118.140065},
-					{lat: 34.045941, lng: -118.138583},
-					{lat: 34.057826, lng: -118.127587}
-				];
+							var routeTwoCoordinates = [
+								{lat: 34.062448, lng: -118.127570},
+								{lat: 34.062448, lng: -118.134233},
+								{lat: 34.061551, lng: -118.134222},
+								{lat: 34.060991, lng: -118.133814},
+								{lat: 34.059642, lng: -118.133538},
+								{lat: 34.056964, lng: -118.134458},
+								{lat: 34.047964, lng: -118.139814},
+								{lat: 34.046506, lng: -118.140313},
+								{lat: 34.046235, lng: -118.139251},
+								{lat: 34.044799, lng: -118.136799},
+								{lat: 34.046826, lng: -118.135678},
+								{lat: 34.046995, lng: -118.135501},
+								{lat: 34.047279, lng: -118.135045},
+								{lat: 34.048093, lng: -118.134841},
+								{lat: 34.048670, lng: -118.134290},
+								{lat: 34.048788, lng: -118.134030},
+								{lat: 34.048788, lng: -118.133439},
+								{lat: 34.048967, lng: -118.133179},
+								{lat: 34.052010, lng: -118.131539},
+								{lat: 34.053146, lng: -118.130294},
+								{lat: 34.054111, lng: -118.129559},
+								{lat: 34.054579, lng: -118.128905},
+								{lat: 34.054809, lng: -118.128054},
+								{lat: 34.054772, lng: -118.127866},
+								{lat: 34.054482, lng: -118.127570},
+								{lat: 34.055106, lng: -118.126406},
+								{lat: 34.056575, lng: -118.126424},
+								{lat: 34.056575, lng: -118.127499},
+								{lat: 34.057826, lng: -118.127587}
+							];
 
-				var routeTwo = new google.maps.Polygon({
-					paths: routeTwoCoordinates,
-					strokeColor: '#32CD32',
-					strokeOpacity: 1.0,
-					strokeWeight: 3,
-					fillColor: 'transparent',
-					fillOpacity: 0.4
-				});
+							var routeTwo = new google.maps.Polygon({
+								paths: routeTwoCoordinates,
+								strokeColor: '#32CD32',
+								strokeOpacity: 1.0,
+								strokeWeight: 3,
+								fillColor: '#32CD32',
+								fillOpacity: 0.4
+							});
 
-				routeTwo.setMap(map);
+							routeTwo.setMap(map);
 
-				var routeThreeCoordinates = [
-					{lat: 34.059124, lng: -118.125745},
-					{lat: 34.059897, lng: -118.127477},
-					{lat: 34.066071, lng: -118.127558},
-					{lat: 34.066169, lng: -118.109539},
-					{lat: 34.062649, lng: -118.109464},
-					{lat: 34.062409, lng: -118.112393},
-					{lat: 34.055423, lng: -118.112543},
-					{lat: 34.055405, lng: -118.121019},
-					{lat: 34.062625, lng: -118.120632}
-				];
+							var routeThreeCoordinates = [
+								{lat: 34.059775, lng: -118.125541},
+								{lat: 34.059897, lng: -118.127477},
+								{lat: 34.066071, lng: -118.127558},
+								{lat: 34.066169, lng: -118.109539},
+								{lat: 34.062649, lng: -118.109464},
+								{lat: 34.062409, lng: -118.112393},
+								{lat: 34.055423, lng: -118.112543},
+								{lat: 34.055405, lng: -118.121019},
+								{lat: 34.059826, lng: -118.121178}
+							];
 
-				var routeThree = new google.maps.Polygon({
-					paths: routeThreeCoordinates,
-					strokeColor: '#9932CC',
-					strokeOpacity: 0.75,
-					strokeWeight: 3,
-					fillColor: 'transparent',
-					fillOpacity: 0.4
-				});
+							var routeThree = new google.maps.Polygon({
+								paths: routeThreeCoordinates,
+								strokeColor: '#9932CC',
+								strokeOpacity: 0.75,
+								strokeWeight: 3,
+								fillColor: '#9932CC',
+								fillOpacity: 0.4
+							});
 
-				routeThree.setMap(map);
+							routeThree.setMap(map);
 
-				var routeFourCoordinates = [
-					{lat: 34.059124, lng: -118.125745},
-					{lat: 34.062226, lng: -118.139034},
-					{lat: 34.060140, lng: -118.144981},
-					{lat: 34.062682, lng: -118.134053},
-					{lat: 34.066056, lng: -118.134134}
-				];
+							var routeFourCoordinates = [
+								{lat: 34.059775, lng: -118.125541},
+								{lat: 34.062426, lng: -118.125572},
+								{lat: 34.062226, lng: -118.139034},
+								{lat: 34.059286, lng: -118.139099},
+								{lat: 34.060043, lng: -118.137771},
+								{lat: 34.062409, lng: -118.137846},
+								{lat: 34.062682, lng: -118.134053},
+								{lat: 34.066056, lng: -118.134134},
+								{lat: 34.066129, lng: -118.127642},
+								{lat: 34.059796, lng: -118.127536}
+							];
 
-				var routeFour = new google.maps.Polygon({
-					paths: routeFourCoordinates,
-					strokeColor: '#FFDF00',
-					strokeOpacity: 0.8,
-					strokeWeight: 3,
-					fillColor: 'transparent',
-					fillOpacity: 0.4
-				});
+							var routeFour = new google.maps.Polygon({
+								paths: routeFourCoordinates,
+								strokeColor: '#FFDF00',
+								strokeOpacity: 0.8,
+								strokeWeight: 3,
+								fillColor: '#FFDF00',
+								fillOpacity: 0.4
+							});
 
-				routeFour.setMap(map);
+							routeFour.setMap(map);
 
-				var transitLayer = new google.maps.TransitLayer();
-				transitLayer.setMap(map);
-			}
+							var transitLayer = new google.maps.TransitLayer();
+							transitLayer.setMap(map);
+						}
 		</script>
 
 		<script async defer
